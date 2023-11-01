@@ -1,0 +1,179 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.header-row-one{
+    height: 80px;
+    background-color: #218C74;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+th,td{
+    border: 1px solid  #333;
+    min-width:80px;
+}
+
+td{
+    outline: none;
+}
+
+.header{
+    text-align: center;
+    font-size: 45px;
+    margin: 0px;
+    padding: 3px;
+}
+
+
+.header-row-one>p{
+    display: inline-block;
+    padding-inline: 18px;
+    color: white;
+    font-size: 19px;
+    margin-top: 38px;
+    padding: 10px;
+}
+
+
+.header-row-one>p:hover{
+    background-color: white;
+    color: green;
+}
+
+
+.header-editor-row{
+    height: 90px;
+    background-color: #D7D7D7;
+    padding: 10px;
+}
+
+#current-cell{
+    margin: 0px;
+    background-color: white;
+    padding-inline: 10px;
+    border-radius: 4px;
+    width: 230px;
+}
+
+.h-e-r-1{
+    display: flex;
+    margin-top: 22px;
+}
+
+.c-x-btn{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+}
+
+.c-x-btn:hover{
+    opacity: 0.7;
+}
+
+#font-style-dropdown{
+    width: 120px;
+    border-radius: 8px;
+    border: none;
+    margin-inline: 10px;
+    outline: none;
+    text-align: center;
+    font-size: 15px;
+}
+
+
+#font-size-dropdown{
+    width: 40px;
+    border: none;
+    outline: none;
+    margin-inline:10px;
+    border-radius:8px ;
+}
+
+
+.font-style-btn{
+    margin-inline: 10px;
+    /* width: 25px;
+    height: 25px; */
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.font-style-btn:hover{
+    opacity: 0.7;
+}
+
+#bgColor,#fontColor{
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    margin-inline: 10px;
+}
+
+.download-file{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin-inline: 10px;
+}
+.download-file:hover{
+    opacity: 0.7;
+}
+#upload-input{
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.header-r-t-1>h1{
+    margin: 0px;
+}
+.header-row-third{
+    margin: 10px 0px;
+    padding:5px 20px;
+    height: 100px;
+    background-color:#D7D7D7 ;
+}
+
+#save-sheet-btn{
+    border-radius: 8px;
+    padding:5px;
+    border: none;
+    width: 90px;
+    font-size: 18px;
+    margin-right: 10px;
+}
+#add-sheet-btn{
+    border-radius: 8px;
+    padding:5px;
+    border: none;
+    width: 170px;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+#button-container>#my-sheets{
+    border-radius: 8px;
+    padding:6px;
+    border: none;
+    width: 60px;
+    margin-top: 6px;
+    font-size: 12px;
+    margin-right: 10px;
+
+}
+
+
+
+
+
+
+.main-section{
+    overflow: scroll;
+}

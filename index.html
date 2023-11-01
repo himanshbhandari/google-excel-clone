@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- table use karenge  yha -->
+    <div>
+
+        <div class="header-row-one">
+            <p>File</p>
+            <p>Home</p>
+            <p>Insert</p>
+            <p>Layout</p>
+            <p>Help</p>
+        </div>
+
+        <div class="header-editor-row">
+            <h1 id="current-cell">No Cell Selected</h1>
+            <div class="h-e-r-1">
+                <button id="cut-btn" class="c-x-btn"><img src="./resources/cut.png"  title="cut" width="25px" height="25px"/></button>
+                <button id="copy-btn" class="c-x-btn"><img src="./resources/copy.png" title="copy" alt="img" width="25px" height="25px"></button>
+                <button id="paste-btn" class="c-x-btn"><img src="./resources/paste.png" title="paste" alt="img" width="25px" height="25px"></button>
+
+
+                <select id="font-style-dropdown">
+                    <option value="serif">Serif</option>
+                    <option value="sans-serif">Sans Serif</option> <!-- jab bhi  ham koi option select karte hain toh uska value  select tag me upar pass ho jata hai-->
+                    <option value="monospace">Monospace</option>
+                    <option value="cursive">Cursive</option>
+                </select>
+
+                <select id="font-size-dropdown">
+                    <option value="10px">10</option>
+                    <option value="12px">12</option> <!-- jab bhi  ham koi option select karte hain toh uska value  select tag me upar pass ho jata hai-->
+                    <option value="14px">14</option>
+                    <option value="16px">16</option>
+                    <option value="18px">18</option>
+                </select>
+
+                <button id="bold-btn" class="font-style-btn"><img src="./resources/bold.png" width="17px" height="17px" title="bold" alt="img"></button>
+                <button id="italic-btn" class="font-style-btn"><img src="./resources/italic.png" width="17px" height="17px"  title="italic" alt="img"></button>
+                <button id="underline-btn" class="font-style-btn"><img src="./resources/underline.png"  width="17px" height="17px" title="underline" alt="img"></button>
+                <button id="left-btn" class="font-style-btn"><img src="./resources/align-left.png"  width="17px" height="17px" title="left" alt="img"></button>
+                <button id="center-btn" class="font-style-btn"><img src="./resources/center.png" width="17px" height="17px"  title="center" alt="img"></button>
+                <button id="right-btn" class="font-style-btn"><img src="./resources/align-right.png" width="17px" height="17px"  title="right" alt="img"></button>
+
+
+                <label for="bgColor"><img src="./resources/font.png" title="font-color" alt="img" width="25px" height="25px"></label>
+                <input type="color" id="bgColor">
+
+                <label for="fontColor"><img src="./resources/paint-bucket.png" title="background-color" width="25px"  height="25px" alt="img"></label>
+                <input type="color" id="fontColor">
+
+                <button class="download-file" onclick="downloadMatrix()"><img src="./resources/downloads.png" title="download" alt="img" width="25px" height="25px"></button>
+                <input type="file" accept=".json" id="upload-input"> 
+
+            </div>
+            
+        </div>
+
+        <div class="header-row-third">
+            <div class="header-r-t-1">
+                <h1 id="sheet-no">Sheet No - 1</h1>
+            </div>
+            <div class="header-r-t-2">
+               
+                    <button id="save-sheet-btn">Save</button>
+                    <button id="add-sheet-btn">Add Sheet</button>
+               
+            </div>
+            
+                <div id="button-container">
+                    <button id="sheet-1" onclick="viewSheet(event)">Sheet 1</button>
+                </div>
+           
+
+        </div>
+
+
+        <!-- <button id="bold-btn">B</button>
+        <button id="italic-btn">I</button>
+        <button id="underline-btn">U</button>
+        <button id="left-btn">Left</button>
+        <button id="center-btn">Center</button>
+        <button id="right-btn">Right</button> -->
+
+        <!-- <select id="font-style-dropdown">
+            <option value="serif">Serif</option>
+            <option value="sans-serif">Sans Serif</option>  -->
+                                            <!-- jab bhi  ham koi option select karte hain toh uska value  select tag me upar pass ho jata hai-->
+            <!-- <option value="monospace">Monospace</option>
+            <option value="cursive">Cursive</option>
+        </select> -->
+
+        <!-- <select id="font-size-dropdown">
+            <option value="10px">10</option>
+            <option value="12px">12</option>  -->
+                                    <!-- jab bhi  ham koi option select karte hain toh uska value  select tag me upar pass ho jata hai-->
+            <!-- <option value="14px">14</option>
+            <option value="16px">16</option>
+            <option value="18px">18</option>
+        </select> -->
+
+
+        <!-- <label for="bgColor">bg Color</label>
+        <input type="color" id="bgColor"> -->
+         
+        <!-- <label for="fontColor">bg Color</label>
+        <input type="color" id="fontColor"> -->
+         
+        <!-- <button id="cut-btn">Cut</button>
+        <button id="copy-btn">Copy</button>
+        <button id="paste-btn">Paste</button> -->
+
+        <!-- <button onclick="downloadMatrix()">Download</button>
+        <input type="file" accept=".json" id="upload-input"> 
+         you an attach here change or input any type of eventlistener input is standard eventistener for all typeof input -->
+    </div>
+
+    <!-- <h1 id="sheet-no">Sheet No - 1</h1> -->
+
+    <!-- <div>
+        <button id="save-sheet-btn">Save</button>
+        <button id="add-sheet-btn">Add Sheet</button>
+    </div> -->
+    <!-- <br> -->
+    <!-- <div id="button-container">
+        <button id="sheet-1" onclick="viewSheet(event)">Sheet 1</button>
+    </div> -->
+    <!-- <br> -->
+   
+    <div class="main-section">
+        <table id="my-table">
+            <thead>
+                <tr id="table-heading-row">
+                    <th></th>
+                    <!-- <th>A</th>
+                    <th>B</th>
+                    <th>C</th>    instead of hardcode inserting  element
+                     using js for  loop-->
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <!-- <tr>
+                    <th>1</th>
+                </tr>
+                <tr>
+                    <th>2</th>
+                </tr>  doing same thng using java script instead of hardcoded-->
+            </tbody>
+        </table>
+    
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
