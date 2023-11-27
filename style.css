@@ -62,7 +62,11 @@ td{
 .h-e-r-1{
     display: flex;
     margin-top: 22px;
+    overflow: scroll;
 }
+.h-e-r-1::-webkit-scrollbar {
+    display: none;
+  }
 
 .c-x-btn{
     border: none;
@@ -169,8 +173,14 @@ td{
 
 }
 
+#button-container{
+    padding: 8px 0px;
+}
 
-
+.sht-btn{
+    border: none;
+    border: 8px;
+}
 
 
 
